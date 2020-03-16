@@ -1,0 +1,9 @@
+name: RetronixMobcoins
+version: 1.0-SNAPSHOT
+main: net.retronixmc.mobcoins.Main
+authors: [WeChanDoIt]
+description: Mobcoin Plugin!
+commands:
+  coins:
+    description: Coins command
+    aliases: [mobcoins, retronixmobcoins]

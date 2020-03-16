@@ -1,0 +1,13 @@
+net\retronixmc\mobcoins\Main.class
+net\retronixmc\mobcoins\commands\Coins.class
+net\retronixmc\mobcoins\events\EntityEvents.class
+net\retronixmc\mobcoins\events\MobCoinsReceiveEvent.class
+net\retronixmc\mobcoins\chance\ChanceManager.class
+net\retronixmc\mobcoins\hooks\PlaceholderAPIHook.class
+net\retronixmc\mobcoins\utils\DataHandler.class
+net\retronixmc\mobcoins\chance\DropChance.class
+net\retronixmc\mobcoins\events\MobCoinsEvent.class
+net\retronixmc\mobcoins\objects\Profile.class
+net\retronixmc\mobcoins\events\PlayerEvents.class
+net\retronixmc\mobcoins\RetronixMobcoinsAPI.class
+net\retronixmc\mobcoins\utils\ChatUtils.class
