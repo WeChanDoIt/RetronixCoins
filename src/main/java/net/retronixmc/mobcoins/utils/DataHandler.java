@@ -1,9 +1,7 @@
 package net.retronixmc.mobcoins.utils;
 
-import net.retronixmc.mobcoins.objects.Profile;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.World;
+import net.retronixmc.mobcoins.profile.Profile;
+import net.retronixmc.mobcoins.utils.MobcoinTop;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -31,6 +29,7 @@ public class DataHandler {
         }
         for (Profile profile : profiles) {
             data.set("profiles." + profile.getUUID() + ".mobcoins", profile.getMobCoins());
+            data.set("profiles." + profile.getUUID() + ".isBlacklisted", profile.isBlacklistedFromTop());
         }
         try {
             data.save(file);
@@ -46,8 +45,10 @@ public class DataHandler {
         for (String s : data.getConfigurationSection("profiles").getKeys(false)) {
             try {
                 int mobcoins = data.getInt("profiles." + s + ".mobcoins");
+                boolean blacklisted = data.getBoolean("profiles." + s + ".isBlacklisted");
                 Profile profile = new Profile(UUID.fromString(s));
                 profile.setMobCoins(mobcoins);
+                profile.setBlacklistedFromTop(blacklisted);
                 profiles.add(profile);
             } catch (IllegalArgumentException e)
             {
@@ -77,5 +78,27 @@ public class DataHandler {
 
     public void setProfiles(List<Profile> profiles) {
         this.profiles = profiles;
+    }
+
+    public List<Profile> getTopMobcoins() {
+        HashMap<Profile, Integer> profileMap = new HashMap<Profile, Integer>();
+        MobcoinTop mobcoinTop = new MobcoinTop(profileMap);
+        TreeMap<Profile, Integer> sortedpoints = new TreeMap<Profile, Integer>(mobcoinTop);
+        List<Profile> top = new ArrayList<Profile>();
+
+        for (Profile profile : this.profiles)
+        {
+            if (!profile.isBlacklistedFromTop()) {
+                Integer mobcoins = profile.getMobCoins();
+                profileMap.put(profile, mobcoins);
+            }
+        }
+
+        sortedpoints.putAll(profileMap);
+
+        for(Profile profile : sortedpoints.keySet()) {
+            top.add(profile);
+        }
+        return top;
     }
 }

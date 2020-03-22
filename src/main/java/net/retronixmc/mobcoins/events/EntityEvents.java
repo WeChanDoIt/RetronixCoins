@@ -4,7 +4,7 @@ import com.bgsoftware.wildstacker.api.WildStackerAPI;
 import net.retronixmc.mobcoins.Main;
 import net.retronixmc.mobcoins.RetronixMobcoinsAPI;
 import net.retronixmc.mobcoins.chance.DropChance;
-import net.retronixmc.mobcoins.objects.Profile;
+import net.retronixmc.mobcoins.profile.Profile;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;

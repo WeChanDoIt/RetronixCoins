@@ -1,7 +1,6 @@
 package net.retronixmc.mobcoins.chance;
 
 import net.retronixmc.mobcoins.Main;
-import net.retronixmc.mobcoins.objects.Profile;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.EntityType;

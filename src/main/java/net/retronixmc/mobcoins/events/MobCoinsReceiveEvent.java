@@ -1,6 +1,6 @@
 package net.retronixmc.mobcoins.events;
 
-import net.retronixmc.mobcoins.objects.Profile;
+import net.retronixmc.mobcoins.profile.Profile;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;

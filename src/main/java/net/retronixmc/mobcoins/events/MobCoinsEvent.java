@@ -2,7 +2,8 @@ package net.retronixmc.mobcoins.events;
 
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.ComponentBuilder;
-import net.retronixmc.mobcoins.objects.Profile;
+import net.retronixmc.mobcoins.generator.MobCoinGenerator;
+import net.retronixmc.mobcoins.profile.Profile;
 import net.retronixmc.mobcoins.utils.ChatUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,5 +21,16 @@ public class MobCoinsEvent implements Listener {
         profile.setMobCoins(profile.getMobCoins() + event.getAmount());
 
         player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new ComponentBuilder(ChatUtils.chat("&b+" + event.getAmount() + " mobcoins")).create());
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onMobCoinsGenerate(MobCoinsGenerateEvent event)
+    {
+        if (event.isCancelled()) return;
+
+        MobCoinGenerator generator = event.getGenerator();
+        int amount = event.getAmount();
+
+        generator.generateMobcoins(amount);
     }
 }

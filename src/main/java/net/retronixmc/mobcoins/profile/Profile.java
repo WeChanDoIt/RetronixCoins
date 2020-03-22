@@ -1,4 +1,4 @@
-package net.retronixmc.mobcoins.objects;
+package net.retronixmc.mobcoins.profile;
 
 import java.util.UUID;
 
@@ -8,9 +8,18 @@ import org.bukkit.entity.Player;
 public class Profile {
     private UUID uuid;
     private int mobCoins;
+    private boolean blacklistedFromTop = false;
 
     public Profile(UUID uuid) {
         this.uuid = uuid;
+    }
+
+    public boolean isBlacklistedFromTop() {
+        return blacklistedFromTop;
+    }
+
+    public void setBlacklistedFromTop(boolean blacklistedFromTop) {
+        this.blacklistedFromTop = blacklistedFromTop;
     }
 
     public UUID getUUID() {

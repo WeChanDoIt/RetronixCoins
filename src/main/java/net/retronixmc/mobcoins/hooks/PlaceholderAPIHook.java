@@ -3,7 +3,7 @@ package net.retronixmc.mobcoins.hooks;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import net.retronixmc.mobcoins.Main;
 import net.retronixmc.mobcoins.RetronixMobcoinsAPI;
-import net.retronixmc.mobcoins.objects.Profile;
+import net.retronixmc.mobcoins.profile.Profile;
 import org.bukkit.entity.Player;
 
 import java.text.DecimalFormat;
