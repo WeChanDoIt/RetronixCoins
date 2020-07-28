@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.retronixmc</groupId>
-    <artifactId>RetronixMobcoins</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>RetronixCoins</artifactId>
+    <version>1.2</version>
     <build>
         <plugins>
             <plugin>
@@ -49,15 +49,11 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.OmerBenGera</groupId>
-            <artifactId>WildStackerAPI</artifactId>
-            <version>b18</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.OmerBenGera</groupId>
-            <artifactId>SuperiorSkyblockAPI</artifactId>
-            <version>b9</version>
+            <groupId>me.swanis</groupId>
+            <artifactId>mobcoins</artifactId>
+            <version>1.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/jars/UltimateStacker-1.11.17.jar</systemPath>
         </dependency>
     </dependencies>
 

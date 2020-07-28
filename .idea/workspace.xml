@@ -2,51 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4447018f-c54f-4db6-9501-f25928ad2b92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/commands/MGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/GeneratorEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/MobCoinsGenerateEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/generator/GeneratorManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/generator/MobCoinGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/gui/GUIManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/nbt/NBT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/nbt/NBTBaseType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/nbt/NBTList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/shop/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/shop/ShopItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/shop/ShopManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/EnchantNames.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/ItemBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/MiscUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/MobcoinTop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/UMaterial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jars/UltimateStacker-1.11.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/utils/EXPUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/RetronixMobcoinsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/RetronixMobcoinsAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/chance/ChanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/chance/ChanceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/commands/Coins.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/commands/Coins.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/EntityEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/EntityEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/MobCoinsEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/MobCoinsEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/MobCoinsReceiveEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/MobCoinsReceiveEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/PlayerEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/PlayerEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/hooks/PlaceholderAPIHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/hooks/PlaceholderAPIHook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/objects/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/profile/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/DataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/DataHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dropchances.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/RetronixMobcoinsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/RetronixCoinsAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/chance/ChanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/chance/ChanceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/chance/DropChance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/chance/DropChance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/commands/Coins.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/commands/Coins.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/commands/MGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/EntityEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/events/EntityEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/GeneratorEvents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/MobCoinsEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/events/MobCoinsEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/MobCoinsGenerateEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/MobCoinsReceiveEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/events/MobCoinsReceiveEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/events/PlayerEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/events/PlayerEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/generator/GeneratorManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/generator/MobCoinGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/gui/GUIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/gui/GUIManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/hooks/PlaceholderAPIHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/hooks/PlaceholderAPIHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/nbt/NBT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/nbt/NBT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/nbt/NBTBaseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/nbt/NBTBaseType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/nbt/NBTList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/nbt/NBTList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/profile/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/profile/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/shop/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/shop/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/shop/ShopItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/shop/ShopItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/shop/ShopManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/shop/ShopManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/ChatUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/utils/ChatUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/DataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/utils/DataHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/EnchantNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/utils/EnchantNames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/ItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/utils/ItemBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/MiscUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/utils/MiscUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/MobcoinTop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/utils/MobcoinTop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins/utils/UMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/retronixmc/coins/utils/UMaterial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RetronixMobcoins-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RetronixMobcoins-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/RetronixMobcoinsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/RetronixMobcoinsAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/chance/ChanceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/chance/ChanceManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/commands/Coins.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/commands/Coins.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/EntityEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/EntityEvents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/MobCoinsEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/MobCoinsEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/MobCoinsReceiveEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/MobCoinsReceiveEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/PlayerEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/PlayerEvents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/hooks/PlaceholderAPIHook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/hooks/PlaceholderAPIHook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/objects/Profile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/DataHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/DataHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RetronixMobcoins-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dropchances.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/RetronixMobcoinsAPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/chance/ChanceManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/chance/DropChance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/commands/Coins.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/commands/MGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/EntityEvents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/GeneratorEvents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/MobCoinsEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/MobCoinsGenerateEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/MobCoinsReceiveEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/events/PlayerEvents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/generator/GeneratorManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/generator/MobCoinGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/gui/GUIManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/hooks/PlaceholderAPIHook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/nbt/NBT.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/nbt/NBTBaseType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/nbt/NBTList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/profile/Profile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/shop/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/shop/ShopItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/shop/ShopManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/ChatUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/DataHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/EnchantNames.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/ItemBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/MiscUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/MobcoinTop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/UMaterial$PotionBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/UMaterial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/retronixmc/mobcoins/utils/UPotion.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -65,29 +94,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1Z80hZGtdjqV0ST33WSlSv8Se7E" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/net/retronixmc/mobcoins" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/jars/UltimateStacker-1.11.7.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -111,58 +134,57 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="70" key="#Project_Structure" timestamp="1584235874723">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1594594674062">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="70" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1584235874723" />
-    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1584236134036">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594594674062" />
+    <state x="331" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587867877510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584236134036" />
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1584445691592">
+    <state x="331" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1587867877510" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594061617605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584445691592" />
-    <state x="566" y="271" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584739661744">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594061617605" />
+    <state x="808" y="169" key="FileChooserDialogImpl" timestamp="1595252133672">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="566" y="271" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1584739661744" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584407499891">
+    <state x="808" y="169" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595252133672" />
+    <state width="1478" height="145" key="GridCell.Tab.0.bottom" timestamp="1595033712515">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584407499891" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1584915448305">
+    <state width="1478" height="145" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595033712515" />
+    <state width="1478" height="145" key="GridCell.Tab.0.center" timestamp="1595033712514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584915448305" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1584915448304">
+    <state width="1478" height="145" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595033712514" />
+    <state width="1478" height="145" key="GridCell.Tab.0.left" timestamp="1595033712514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584915448304" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1584915448304">
+    <state width="1478" height="145" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595033712514" />
+    <state width="1478" height="145" key="GridCell.Tab.0.right" timestamp="1595033712515">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584915448304" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1584915448305">
+    <state width="1478" height="145" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595033712514" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1594061333718">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584915448305" />
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1584324609910">
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594061333718" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1594061102390">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1584324609910" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584816708072">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594061102390" />
+    <state x="209" y="114" key="new project wizard" timestamp="1595881565498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584816708072" />
-    <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1584726638498">
+    <state x="209" y="114" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1595881565498" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1594061320819">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="463" y="144" width="609" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1584726638498" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584707435761">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584707435761" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1594061320819" />
   </component>
 </project>
