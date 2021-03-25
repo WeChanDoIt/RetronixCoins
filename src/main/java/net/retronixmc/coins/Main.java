@@ -2,6 +2,8 @@ package net.retronixmc.coins;
 
 import net.retronixmc.coins.chance.ChanceManager;
 import net.retronixmc.coins.commands.Coins;
+import net.retronixmc.coins.commands.CoinsTab;
+import net.retronixmc.coins.config.ConfigHandler;
 import net.retronixmc.coins.events.EntityEvents;
 import net.retronixmc.coins.events.MobCoinsEvent;
 import net.retronixmc.coins.events.PlayerEvents;
@@ -16,18 +18,25 @@ public class Main extends JavaPlugin {
     private DataHandler dataHandler = new DataHandler();
     private ChanceManager chanceManager;
     private ShopManager shopManager;
+    private ConfigHandler configHandler;
     public static Main plugin;
 
     public void onEnable()
     {
         plugin = this;
+        saveDefaultConfig();
         dataHandler.retrieveData();
         chanceManager = new ChanceManager(this);
         shopManager = new ShopManager(this);
+        configHandler = new ConfigHandler();
+        Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getInstance(), new Runnable() {
+            public void run() {
+                loadEvents();
+                loadCommands();
+                registerPlaceholders();
+            }
+        }, 1L);
 
-        loadEvents();
-        loadCommands();
-        registerPlaceholders();
     }
 
     public void onDisable()
@@ -38,8 +47,8 @@ public class Main extends JavaPlugin {
     private void loadEvents()
     {
         Bukkit.getServer().getPluginManager().registerEvents(new PlayerEvents(), this);
-        Bukkit.getServer().getPluginManager().registerEvents(new MobCoinsEvent(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new EntityEvents(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new MobCoinsEvent(), this);
 
     }
 
@@ -65,6 +74,7 @@ public class Main extends JavaPlugin {
     private void loadCommands()
     {
         getCommand("coins").setExecutor(new Coins());
+        getCommand("coins").setTabCompleter(new CoinsTab());
     }
 
     protected DataHandler getDataHandler()

@@ -14,9 +14,10 @@ public class MobCoinsReceiveEvent
     private Profile profile;
     private int amount;
 
-    public MobCoinsReceiveEvent(Profile profile, int amount) {
+    public MobCoinsReceiveEvent(Profile profile, int amount, boolean isCancelled) {
         this.profile = profile;
         this.amount = amount;
+        this.isCancelled = isCancelled;
     }
 
 
@@ -29,14 +30,7 @@ public class MobCoinsReceiveEvent
 
 
     public void setAmount(int amount) { this.amount = amount; }
-
-
-
-
-    public HandlerList getHandlers() { return handlers; }
-
-
-
+    
     public static HandlerList getHandlerList() { return handlers; }
 
 
@@ -48,4 +42,9 @@ public class MobCoinsReceiveEvent
 
 
     public void setCancelled(boolean isCancelled) { this.isCancelled = isCancelled; }
+
+    @Override
+    public HandlerList getHandlers() {
+        return handlers;
+    }
 }

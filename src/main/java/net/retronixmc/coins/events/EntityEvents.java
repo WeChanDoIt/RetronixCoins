@@ -1,37 +1,42 @@
 package net.retronixmc.coins.events;
 
-import com.songoda.ultimatestacker.UltimateStacker;
-import com.songoda.ultimatestacker.entity.EntityStackManager;
 import net.retronixmc.coins.Main;
 import net.retronixmc.coins.RetronixCoinsAPI;
 import net.retronixmc.coins.chance.DropChance;
 import net.retronixmc.coins.profile.Profile;
+import net.wechandoit.src.events.PlayerKillMobEvent;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDeathEvent;
 
 import java.util.Random;
 
 public class EntityEvents implements Listener {
-    @EventHandler(priority = EventPriority.LOWEST)
-    public void onEntityDeath(EntityDeathEvent event) {
-        Player killer = event.getEntity().getKiller();
 
-        if (killer == null)
-            return;
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onDamageEntity(PlayerKillMobEvent event) {
+        Player killer = event.getPlayer();
+        EntityType entityType = event.getEntity().getType();
+
         Profile profile = RetronixCoinsAPI.getDataHandler().getProfile(killer);
-        DropChance dropChance = RetronixCoinsAPI.getChanceManager().getChance(event.getEntityType());
+        DropChance dropChance = RetronixCoinsAPI.getChanceManager().getChance(entityType);
 
-        if (dropChance == null)
-            return;
+        int coinsAmount = 0;
         Random random = new Random();
-        EntityStackManager manager = UltimateStacker.getInstance().getEntityStackManager();
+        for (int i = 0; i < event.getEntitiesKilled(); i++) {
+            if (random.nextInt(100) <= dropChance.getChance() - 1)
+                coinsAmount++;
+        }
 
-        if (random.nextInt(100) > dropChance.getChance() - 1)
-            return;
-        MobCoinsReceiveEvent mobCoinsReceiveEvent = new MobCoinsReceiveEvent(profile, 1);
-        Main.getInstance().getServer().getPluginManager().callEvent(mobCoinsReceiveEvent);
+        if (dropChance != null && coinsAmount > 0) {
+
+            MobCoinsReceiveEvent mobCoinsReceiveEvent = new MobCoinsReceiveEvent(profile, coinsAmount, false);
+
+            Main.getInstance().getServer().getPluginManager().callEvent(mobCoinsReceiveEvent);
+
+        }
     }
+
 }

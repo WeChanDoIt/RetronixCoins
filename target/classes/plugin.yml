@@ -1,9 +1,9 @@
 name: RetronixCoins
-version: 1.1
+version: 1.2
 main: net.retronixmc.coins.Main
 authors: [WeChanDoIt]
 description: Mobcoin Plugin!
-softdepend: [UltimateStacker]
+softdepend: [WildStacker, PlaceholderAPI]
 api-version: 1.15
 commands:
   coins:

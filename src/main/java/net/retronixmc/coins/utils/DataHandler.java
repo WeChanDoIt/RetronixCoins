@@ -14,7 +14,7 @@ public class DataHandler {
 
     private File file = new File("plugins/RetronixCoins/", "data.yml");
     private FileConfiguration data = YamlConfiguration.loadConfiguration(file);
-    private List<Profile> profiles = new ArrayList<Profile>();
+    private ArrayList<Profile> profiles = new ArrayList<Profile>();
 
     public void saveData() {
 
@@ -72,33 +72,18 @@ public class DataHandler {
         return getProfile(uuid);
     }
 
+    public List<Profile> getSortedProfiles()
+    {
+        ArrayList<Profile> clone = (ArrayList<Profile>) profiles.clone();
+        Collections.sort(clone);
+        return clone;
+    }
+
     public List<Profile> getProfiles() {
         return profiles;
     }
 
-    public void setProfiles(List<Profile> profiles) {
+    public void setProfiles(ArrayList<Profile> profiles) {
         this.profiles = profiles;
-    }
-
-    public List<Profile> getTopMobcoins() {
-        HashMap<Profile, Integer> profileMap = new HashMap<Profile, Integer>();
-        MobcoinTop mobcoinTop = new MobcoinTop(profileMap);
-        TreeMap<Profile, Integer> sortedpoints = new TreeMap<Profile, Integer>(mobcoinTop);
-        List<Profile> top = new ArrayList<Profile>();
-
-        for (Profile profile : this.profiles)
-        {
-            if (!profile.isBlacklistedFromTop()) {
-                Integer coins = profile.getCoins();
-                profileMap.put(profile, coins);
-            }
-        }
-
-        sortedpoints.putAll(profileMap);
-
-        for(Profile profile : sortedpoints.keySet()) {
-            top.add(profile);
-        }
-        return top;
     }
 }

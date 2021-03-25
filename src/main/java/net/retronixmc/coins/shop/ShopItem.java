@@ -63,7 +63,7 @@ public class ShopItem {
         this.item = item;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 

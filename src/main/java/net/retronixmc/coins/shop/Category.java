@@ -9,14 +9,24 @@ public class Category {
     private ItemStack icon;
     private ArrayList<ShopItem> categoryItems = new ArrayList<>();
     private Inventory inventory;
+    private int invSize;
     private int slot;
     private String name;
 
-    public Category(ItemStack itemStack, String name, int slot)
+    public Category(ItemStack itemStack, String name, int slot, int invSize)
     {
         icon = itemStack;
         this.name = name;
         this.slot = slot;
+        this.invSize = invSize;
+    }
+
+    public int getInvSize() {
+        return invSize;
+    }
+
+    public void setInvSize(int invSize) {
+        this.invSize = invSize;
     }
 
     public ItemStack getIcon() {
@@ -37,14 +47,14 @@ public class Category {
         categoryItems = items;
     }
 
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
     public String getName()
     {
         return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
     }
 
     public int getSlot()
@@ -57,14 +67,14 @@ public class Category {
         this.slot = slot;
     }
 
-    public void setInventory(Inventory inventory)
-    {
-        this.inventory = inventory;
-    }
-
     public Inventory getInventory()
     {
         return inventory;
+    }
+
+    public void setInventory(Inventory inventory)
+    {
+        this.inventory = inventory;
     }
 
 }

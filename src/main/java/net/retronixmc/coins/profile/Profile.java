@@ -1,11 +1,11 @@
 package net.retronixmc.coins.profile;
 
-import java.util.UUID;
-
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-public class Profile {
+import java.util.UUID;
+
+public class Profile implements Comparable<Profile> {
     private UUID uuid;
     private int coins;
     private boolean blacklistedFromTop = false;
@@ -42,7 +42,9 @@ public class Profile {
         return (profile.getUUID().equals(uuid)) && (profile.getUUID().equals(coins));
     }
 
+    @Override
     public int compareTo(Profile profile) {
         return coins - profile.getCoins();
     }
+
 }

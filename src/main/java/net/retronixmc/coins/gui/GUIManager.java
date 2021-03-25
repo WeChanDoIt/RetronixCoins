@@ -22,7 +22,7 @@ public class GUIManager {
         Inventory gui = Bukkit.createInventory(null, 18,
                 ChatColor.translateAlternateColorCodes('&', "&8&nCoin Top"));
 
-        List<Profile> top = RetronixCoinsAPI.getDataHandler().getTopMobcoins();
+        List<Profile> top = RetronixCoinsAPI.getDataHandler().getSortedProfiles();
         Integer count = 0;
         for (Profile profile : top) {
             if (count < 10) {

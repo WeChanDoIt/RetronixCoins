@@ -2,6 +2,8 @@ package net.retronixmc.coins.shop;
 
 import net.retronixmc.coins.Main;
 import net.retronixmc.coins.RetronixCoinsAPI;
+import net.retronixmc.coins.config.ConfigData;
+import net.retronixmc.coins.gui.GUIItem;
 import net.retronixmc.coins.utils.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -97,6 +99,7 @@ public class ShopManager {
             short data = 0;
             int amount = 1;
             int slot = 0;
+            int invSize = 54;
             String name = "";
             List<String> lore = new ArrayList<>();
             // load itemstack based on data
@@ -108,13 +111,14 @@ public class ShopManager {
             if (categoryData.getStringList("categories." + s + ".lore") != null)
                 lore = categoryData.getStringList("categories." + s + ".lore");
             slot = categoryData.getInt("categories." + s + ".slot");
+            invSize = categoryData.getInt("categories." + s + ".rows") * 9;
             ItemStack itemStack = new ItemStack(material, amount, data);
             ItemMeta meta = itemStack.getItemMeta();
             meta.setDisplayName(ChatUtils.chat(name));
             meta.setLore(lore);
             itemStack.setItemMeta(meta);
 
-            categories.add(new Category(itemStack, s, slot));
+            categories.add(new Category(itemStack, s, slot, invSize));
         }
     }
 
@@ -126,7 +130,7 @@ public class ShopManager {
         }
         for (String s : itemsData.getConfigurationSection("shops").getKeys(false)) {
             Category c = getCategory(s);
-            Inventory category = Bukkit.createInventory(null, 54, c.getIcon().getItemMeta().getDisplayName());
+            Inventory category = Bukkit.createInventory(null, c.getInvSize(), c.getIcon().getItemMeta().getDisplayName());
             ArrayList<ShopItem> shopItems = new ArrayList<>();
             for (String j : itemsData.getConfigurationSection("shops." + s).getKeys(false)) {
                 Material material;
@@ -149,7 +153,8 @@ public class ShopManager {
                     data = Short.parseShort(itemsData.getString("shops." + s + "." + j + ".damage"));
                 name = itemsData.getString("shops." + s + "." + j + ".name");
                 if (itemsData.getStringList("shops." + s + "." + j + ".lore") != null)
-                    lore = itemsData.getStringList("shops." + s + "." + j + ".lore");
+                    for (String l : itemsData.getStringList("shops." + s + "." + j + ".lore"))
+                        lore.add(ChatUtils.chat(l));
 
                 if (itemsData.getStringList("shops." + s + "." + j + ".enchants") != null)
                     enchants = itemsData.getStringList("shops." + s + "." + j + ".enchants");
@@ -217,7 +222,7 @@ public class ShopManager {
             ItemStack backButton = ItemBuilder.getItemStack(Material.BARRIER, 1, (short) 0, ChatUtils.chat("&c&lBACK"));
             ItemStack darkFillerItem = ItemBuilder.getItemStack(UMaterial.BLACK_STAINED_GLASS_PANE.getItemStack(), " ");
 
-            category.setItem(45, backButton);
+            category.setItem(category.getSize() - 9, backButton);
 
             int i = 0;
 
@@ -263,29 +268,24 @@ public class ShopManager {
 
     public Inventory getCategoryInventory(Player player) {
         loadCategories();
-        Inventory categoryInventory = Bukkit.createInventory(null, 36, ChatUtils.chat("&8&nCoin Shop"));
+        Inventory categoryInventory = Bukkit.createInventory(null, ConfigData.rows * 9, ChatUtils.chat("&8&nCoin Shop"));
+
+        for (GUIItem item : ConfigData.shopFillerItems)
+        {
+            for (int slot : item.getSlots()) {
+                categoryInventory.setItem(slot, item.getItemStack());
+            }
+        }
+
         for (Category category : categories)
         {
             categoryInventory.setItem(category.getSlot(), category.getIcon());
         }
 
-        ItemStack convert = ItemBuilder.getItemStack(UMaterial.EXPERIENCE_BOTTLE.getItemStack(), ChatUtils.chat("&3&l[!] Convert XP TO COINS"));
-        categoryInventory.setItem(27, convert);
-        ItemStack playerSkull = ItemBuilder.getSkullFromName(player.getName());
-        categoryInventory.setItem(35, ItemBuilder.getItemStack(playerSkull, ChatUtils.chat("&3&l"+player.getName()), Arrays.asList(new String[]{ChatUtils.chat("&7Stats:"), ChatUtils.chat("&7Coins: " + RetronixCoinsAPI.getDataHandler().getProfile(player).getCoins())})));
-        ItemStack lightfillerItem = ItemBuilder.getItemStack(UMaterial.GRAY_STAINED_GLASS_PANE.getItemStack(), " ");
-        ItemStack darkFillerItem = ItemBuilder.getItemStack(UMaterial.BLACK_STAINED_GLASS_PANE.getItemStack(), " ");
-
-        int i = 0;
-
-        for (ItemStack itemStack : categoryInventory.getContents()) {
-            if (itemStack == null) {
-                i++;
-            }
-        }
-        for (int j = 0; j < i; j++) {
-            categoryInventory.setItem(categoryInventory.firstEmpty(), (categoryInventory.firstEmpty() % 2 == 1) ? lightfillerItem : darkFillerItem);
-        }
+        ///convert = ItemBuilder.getItemStack(UMaterial.EXPERIENCE_BOTTLE.getItemStack(), ChatUtils.chat("&3&l[!] Convert XP TO COINS"));
+        //categoryInventory.setItem(18, convert);
+        //ItemStack playerSkull = ItemBuilder.getSkullFromName(player.getName());
+        //categoryInventory.setItem(26, ItemBuilder.getItemStack(playerSkull, ChatUtils.chat("&3&l"+player.getName()), Arrays.asList(new String[]{ChatUtils.chat("&7Stats:"), ChatUtils.chat("&7Coins: " + RetronixCoinsAPI.getDataHandler().getProfile(player).getCoins())})));
         return categoryInventory;
     }
 
